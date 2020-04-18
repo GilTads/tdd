@@ -1,4 +1,4 @@
 test('Devo conhecer as principais assertivas do jest', () => {
-  const number = null
-  expect(number).toBeNull()
+  const number = 10
+  expect(number).not.toBeNull()
 })
