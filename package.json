@@ -2,7 +2,13 @@
   "name": "seubarriga",
   "version": "1.0.0",
   "main": "index.js",
+  "scripts": {
+    "test": "jest"
+  },
   "license": "MIT",
+  "standard": {
+    "env": ["jest"]
+  },
   "devDependencies": {
     "husky": "^4.2.5",
     "jest": "^25.3.0",
