@@ -4,6 +4,7 @@
   "main": "index.js",
   "type": "module",
   "scripts": {
+    "dev": "sucrase-node src/server.js",
     "test": "jest"
   },
   "license": "MIT",
@@ -24,6 +25,10 @@
     "lint-staged": "^10.1.5",
     "nodemon": "^2.0.3",
     "standard": "^14.3.3",
+    "sucrase": "^3.13.0",
     "supertest": "^4.0.2"
+  },
+  "dependencies": {
+    "express": "^4.17.1"
   }
 }
