@@ -1,9 +1,7 @@
-import express from 'express'
-
-const app = express()
+import app from './app'
 
 app.get('/', (req, res) => {
-  res.status(200)
+  res.send('Hello')
 })
 
 app.listen(3000)
