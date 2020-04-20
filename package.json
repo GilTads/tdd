@@ -1,10 +1,10 @@
 {
   "name": "seubarriga",
   "version": "1.0.0",
-  "main": "index.js",
   "scripts": {
-    "dev": "nodemon src/server.js",
-    "test": "jest"
+    "dev": "nodemon server/index.js",
+    "test": "jest",
+    "secure-mode": "jest --watch --verbose=true"
   },
   "license": "MIT",
   "jest": {
@@ -28,6 +28,8 @@
     "supertest": "^4.0.2"
   },
   "dependencies": {
+    "body-parser": "^1.19.0",
+    "dotenv": "^8.2.0",
     "express": "^4.17.1"
   }
 }
