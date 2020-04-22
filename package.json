@@ -3,8 +3,8 @@
   "version": "1.0.0",
   "scripts": {
     "dev": "nodemon server/index.js",
-    "test": "jest --detectOpenHandles --runInBand --detectOpenHandles --verbose=true",
-    "secure-mode": "jest --watch --verbose=true"
+    "test": "NODE_ENV=test jest --verbose=true",
+    "secure-mode": "NODE_ENV=test jest --watch --verbose=true"
   },
   "license": "MIT",
   "jest": {
