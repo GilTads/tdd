@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "scripts": {
     "dev": "nodemon server/index.js",
-    "test": "jest",
+    "test": "jest --detectOpenHandles --runInBand --detectOpenHandles --verbose=true",
     "secure-mode": "jest --watch --verbose=true"
   },
   "license": "MIT",
