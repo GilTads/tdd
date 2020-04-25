@@ -14,7 +14,7 @@ test.only('Deve inserir um usuário com sucesso', async () => {
     .send({
       name: 'Lu',
       email: 'lu@email.com',
-      password: 'xdrz35'
+      password: '123456'
     })
   await expect(res.status).toBe(201)
   await expect(res.body.name).toBe('Lu')
