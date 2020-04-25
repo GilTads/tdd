@@ -15,6 +15,11 @@ export default class ExpressServer {
     return this
   }
 
+  dbConnection (connection) {
+    app.set(connection)
+    return this
+  }
+
   listen (port = process.env.PORT) {
     const welcome = p => () => console.info(`Up and running in ${process.env.NODE_ENV ||
       'development'} @: ${os.hostname()} on port ${p}`)

@@ -1,21 +1,18 @@
+import knex from '../../../server/common/db'
+
 export class UserController {
   async all (req, res) {
     try {
-      const user = [
-        { name: 'Gil', email: 'gil@email.com' }
-      ]
-      res.status(200).json(user)
+      const result = await knex('users').select()
+      res.status(200).json(result)
     } catch (error) {
       res.status(412).json('Erro ao buscar users')
     }
   }
 
-  async create (req, res) {
-    try {
-      res.status(201).json(req.body)
-    } catch (error) {
-
-    }
+  create (req, res) {
+    knex('users').insert(req.body, '*')
+      .then(result => res.status(201).json(result[0]))
   }
 }
 
