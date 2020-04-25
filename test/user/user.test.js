@@ -10,7 +10,12 @@ test('Deve listar todos os usuários', async () => {
 })
 
 test.only('Deve inserir um usuário com sucesso', async () => {
-  const res = await request.post('/user').send({ name: 'Lu', email: 'lu@email.com' })
+  const res = await request.post('/user')
+    .send({
+      name: 'Lu',
+      email: 'lu@email.com',
+      password: 'xdrz35'
+    })
   await expect(res.status).toBe(201)
   await expect(res.body.name).toBe('Lu')
 })
