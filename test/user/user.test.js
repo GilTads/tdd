@@ -6,7 +6,7 @@ const request = supertest(Server)
 test('Deve listar todos os usuários', async () => {
   const res = await request.get('/user')
   await expect(res.status).toBe(200)
-  await expect(res.body).toHaveLength(0)
+  await expect(res.body).toHaveLength(1)
 })
 
 test.only('Deve inserir um usuário com sucesso', async () => {
@@ -16,6 +16,7 @@ test.only('Deve inserir um usuário com sucesso', async () => {
       email: 'lu@email.com',
       password: '123456'
     })
-  await expect(res.status).toBe(201)
+  console.log(res.body)
+  // await expect(res.status).toBe(201)
   await expect(res.body.name).toBe('Lu')
 })

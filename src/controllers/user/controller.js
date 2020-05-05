@@ -10,9 +10,9 @@ export class UserController {
     }
   }
 
-  create (req, res) {
-    knex('users').insert(req.body, '*')
-      .then(result => res.status(201).json(result[0]))
+  async create (req, res) {
+    const result = await knex('users').insert(req.body, '*')
+    res.status(201).json(result[0])
   }
 }
 
